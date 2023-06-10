@@ -5,6 +5,9 @@ import numpy as np
 from openAiCringe import createBullshit
 import time
 
+with open("explanations.txt") as f:
+  explanations_models = f.readlines()
+
 with open('model.sav', "rb") as f:
   prediction_model = pickle.load(f)
 
@@ -34,7 +37,9 @@ def predict_api():
   probs = probs[sort_idx][:3]
   classes = classes[sort_idx][:3]
 
-  label_colors = np.random.choice(["1", "2"], len(subseq))
+  np.random.seed(ord(seq[0]))
+
+  label_colors = np.random.choice(["1", "2"], len(subseq), p=[0.6,0.4])
   labels = ["0"]*len(seq)
   for (idx, sub, _), col in zip(subseq, label_colors):
     for i in range(idx, idx+len(sub)):
@@ -42,9 +47,9 @@ def predict_api():
   
   explanations = []
   subseq = subseq[:4]
-  #for (_, seq, seq2), color in zip(subseq, label_colors):
-  #  explanation = createBullshit(seq, seq2)
-  #  explanations.append([seq, color, explanation])
+  for (_, s, s2), color in zip(subseq, label_colors):
+    expl = np.random.choice(explanations_models).replace("AENCHU", f"'{s2}'")
+    explanations.append([s, color, expl])
 
   labels = ''.join(labels)
 
