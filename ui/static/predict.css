@@ -113,6 +113,7 @@ div#main div#result {
   flex-wrap: wrap;
   padding: 0.5rem;
   align-content: flex-start;
+  row-gap: 0.2rem;
 }
 div#main div#result span {
   width: 2ch;
