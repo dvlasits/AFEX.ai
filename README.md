@@ -5,6 +5,14 @@
 Amino Acid Functions Explained
 
 
+
+
+## The Process
+
+<img width="1495" alt="Screenshot 2023-06-10 at 13 02 17" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/be19748f-582b-4994-bd76-9794399e24f3">
+
+
+
 ## Clustering
 https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralClustering.html
 
