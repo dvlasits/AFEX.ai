@@ -40,6 +40,12 @@ labels = labels.set_index('structureId')
 
 data = pd.concat([seqs, labels], axis=1, join="inner")
 
+classes = list(data['classification'].unique())
+print(classes)
+classIds = data['classification'].map(lambda s: classes.index(s)).rename("classId")
+
+data = pd.concat([data, classIds], axis=1, join="inner")
+
 print(data.head(10))
 
 data.to_csv('all_data.csv')
