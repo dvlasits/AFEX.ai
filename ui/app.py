@@ -4,10 +4,13 @@ import pickle
 import numpy as np
 import time
 
-with open("explanations.txt") as f:
+import os
+my_dir = os.path.dirname(__file__)
+
+with open(os.path.join(my_dir, 'explanations.txt')) as f:
   explanations_models = f.readlines()
 
-with open('model.sav', "rb") as f:
+with open(os.path.join(my_dir, 'model.sav'), "rb") as f:
   prediction_model = pickle.load(f)
 
 app = Flask(__name__)
