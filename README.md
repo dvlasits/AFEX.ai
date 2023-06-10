@@ -1,6 +1,7 @@
 # AFEX.ai
 
-<img width="525" alt="image" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/0a9f6b39-3e22-4958-9b8f-9ad54fef6d75">
+<img width="499" alt="Screenshot 2023-06-10 at 13 04 46" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/23fa2fb9-9deb-4f51-b742-40fd5a4111b6">
+
 
 Amino Acid Functions Explained
 
