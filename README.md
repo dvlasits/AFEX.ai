@@ -9,7 +9,6 @@ Amino Acid Functions Explained
 https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralClustering.html
 
 ## What is the problem
-
 Understanding how cells work is hard and important for bio research and medicine. Lots of high quality data can be obtained from RNAseq or proteomics, but interpretation is hard.
 
 RNAseq and proteomics provide only protein sequence, at least in the first step.
@@ -24,6 +23,17 @@ People are already trying to use large models to predict protein function - but 
 Our model could be improved by using 3D structural data from AlphaFold, to understand spatial interactions - this would be the next iteration of our model.
 
 Identifying important sequences could also give us insight on how proteins work and how can we engineer them
+
+## Example application
+Treating cancer.
+
+Take RNAseq data from cells from tumour and from healthy patient. We want to use the data to rationalize what caused the cancer and what targets (proteins) can we use to treat it.
+
+The data obviously contains lots of noise (proteins very much depend on sex, age, diet, tissue type), so it's hard to find what bits of data are relevant to cancer.
+
+By understanding the protein functions we can rationalize the differences in RNAseq and how they relate to cancer.
+
+Understanding how the specific proteins contribute to cancer helps us decide which proteins are good targets.
 
 ## Daniels pitch
 
