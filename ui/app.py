@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from decide import predict as predict_function
 import pickle
 import numpy as np
-from openAiCringe import createBullshit
 import time
 
 with open("explanations.txt") as f:
