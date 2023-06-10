@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from alignment import local_alignment_score, local_alignment_pair
-data = pd.read_csv('../subsequences/with_representatives.csv')
+data = pd.read_csv('with_representatives.csv')
 from sklearn.linear_model import LogisticRegression
 import pickle
 def train(data):
