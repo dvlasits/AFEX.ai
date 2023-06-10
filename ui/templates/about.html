@@ -5,5 +5,13 @@
 {% endblock %}
 
 {% block content %}
-<h1>Hi about</h1>
+
+<h2>The Problem</h2>
+<h1>Inferring Protein Functionality from Amino Acid sequences</h1>
+
+<p>Initially, BLAST was the tool of choice of classifying proteins. However, this is clearly overly slow and not the right tool for the job. Scientists came up with another method of classifying proteins into groups and training HMM's on each classification. All HMMs are then run through the protein to classify with the highest probability deciding the classification. This is also very slow if you consider the n<sup>2</sup> time complexity of getting a probability from an HMM. The next solution just relies on a neural network which is a complete black box and not helpful. Our solution takes the best of both worlds, it is fast and fully explainable.</p>
+
+<h1>Our solution</h1>
+<img src="{{url_for('static', filename='process.png')}}" alt="">
+
 {% endblock %}

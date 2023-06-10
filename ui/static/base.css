@@ -79,7 +79,7 @@ div#main {
   justify-content: space-evenly;
   gap: 0.2rem;
   width: 100%;
-  max-width: 80ch;
+  max-width: 120ch;
   padding: 2rem 2rem;
   justify-self: center;
 }
@@ -92,6 +92,7 @@ button {
   cursor: pointer;
   border-radius: 0.5rem;
   transition: 0.2s ease-in-out;
+  margin: 1rem;
 }
 button:hover {
   background-color: #22d319;

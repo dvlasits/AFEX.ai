@@ -79,7 +79,7 @@ div#main {
   justify-content: space-evenly;
   gap: 0.2rem;
   width: 100%;
-  max-width: 80ch;
+  max-width: 120ch;
   padding: 2rem 2rem;
   justify-self: center;
 }
@@ -92,18 +92,18 @@ button {
   cursor: pointer;
   border-radius: 0.5rem;
   transition: 0.2s ease-in-out;
+  margin: 1rem;
 }
 button:hover {
   background-color: #22d319;
 }
 
-textarea {
+div#main textarea {
   resize: none;
   width: 100%;
   height: 4rem;
 }
-
-div#result {
+div#main div#result {
   width: 100%;
   outline: 1px #303030 solid;
   border-radius: 0.5rem;
@@ -114,13 +114,59 @@ div#result {
   padding: 0.5rem;
   align-content: flex-start;
 }
-div#result span {
+div#main div#result span {
   width: 2ch;
   text-align: center;
 }
-div#result span.green {
+div#main div#result span.green {
   background-color: #6de04b;
 }
-div#result span.red {
+div#main div#result span.red {
   background-color: #ea6666;
+}
+div#main #pred-func {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+}
+div#main #pred-func span.header {
+  font-weight: bold;
+}
+div#main #pred-func div {
+  border-top: 2px #505050 solid;
+  border-bottom: 2px #505050 solid;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  margin: 0.3rem 0;
+  padding: 0.3rem 0;
+  row-gap: 0.3rem;
+}
+div#main #result-details {
+  width: 100%;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-template-rows: auto auto;
+}
+div#main #pred-explanation {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  grid-auto-flow: row;
+  row-gap: 0.5rem;
+  align-items: center;
+  justify-items: start;
+}
+div#main #pred-explanation span.red {
+  background-color: #ea6666;
+}
+div#main #pred-explanation span.green {
+  background-color: #6de04b;
+}
+div#main #pred-explanation span {
+  padding: 0rem 0.2rem;
 }/*# sourceMappingURL=predict.css.map */

@@ -1,5 +1,23 @@
 @import 'base.scss';
 
-h1 {
-    color: red;
+
+
+div#main {
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 0;
+
+    h2 {
+        text-transform: uppercase;
+    }
+    h1 {
+        border-bottom: 2px solid #808080;
+        text-transform: capitalize;
+        width: 100%;
+    }
+    
+    img {
+        width: 100%;
+    }
 }
+

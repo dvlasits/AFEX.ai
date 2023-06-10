@@ -97,7 +97,7 @@ div#main {
     gap: 0.2rem;
 
     width: 100%;
-    max-width: 80ch;
+    max-width: 120ch;
 
     padding: 2rem 2rem;
 
@@ -118,4 +118,6 @@ button {
     &:hover {
         background-color: #22d319;
     }
+
+    margin: 1rem;
 }
