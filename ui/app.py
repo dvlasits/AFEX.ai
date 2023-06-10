@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from decide import predict as predict_function
 import pickle
 import numpy as np
+from openAiCringe import createBullshit
 
 with open('model.sav', "rb") as f:
   prediction_model = pickle.load(f)
@@ -32,11 +33,17 @@ def predict_api():
   probs = probs[sort_idx][:3]
   classes = classes[sort_idx][:3]
 
+  label_colors = np.random.choice(["1", "2"], len(subseq))
   labels = ["0"]*len(seq)
-  for (idx, sub, _) in subseq:
-    letter = np.random.choice(["2", "1"])
+  for (idx, sub, _), col in zip(subseq, label_colors):
     for i in range(idx, idx+len(sub)):
-      labels[i] = letter
+      labels[i] = col
+  
+  explanations = []
+  subseq = subseq[:4]
+  #for (_, seq, seq2), color in zip(subseq, label_colors):
+  #  explanation = createBullshit(seq, seq2)
+  #  explanations.append([seq, color, explanation])
 
   labels = ''.join(labels)
 
@@ -44,7 +51,7 @@ def predict_api():
 
   print(predicted)
   print("Got data", data)
-  return {"seq": seq, "labels": labels, "probs": probs, "explanation": [["ASDGQTS", "1", "A similar motive `ASDKQYS` is commonly found in many kinases in Wnt signalling"], ["FGHMFAJ", "2", "Similar sequences occur in phosphate binding sites"], ["DFGH", "1", "A similar motive `DFGK` is common for kinases"], ["DFGH", "1", "A similar motive `DFGK` is common for kinases"]]}
+  return {"seq": seq, "labels": labels, "probs": probs, "explanation": explanations}
 
 #deploy now
 
