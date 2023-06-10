@@ -8,9 +8,7 @@ Amino Acid Functions Explained
 
 ## The Process
 
-<img width="991" alt="Screenshot 2023-06-10 at 13 36 00" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/d1c6c92c-6be2-46e8-8369-989519230e00">
-
-
+<img width="975" alt="Screenshot 2023-06-10 at 15 06 51" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/60748575-6289-439a-ae94-2a322f922ade">
 
 
 ## Clustering
