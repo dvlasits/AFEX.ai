@@ -96,4 +96,44 @@ button {
 }
 button:hover {
   background-color: #22d319;
+}
+
+div#loading-overlay {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  /*display: flex;*/
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column;
+  background-color: rgba(128, 128, 128, 0.5019607843);
+  cursor: wait !important;
+}
+div#loading-overlay .loader {
+  border: 0.5rem solid #f3f3f3;
+  /* Light grey */
+  border-top: 0.5rem solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+div#loading-overlay span {
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=base.css.map */

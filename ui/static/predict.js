@@ -3,6 +3,8 @@ $(document).ready(function () {
 });
 
 function predict() {
+    $("#loading-overlay").css("display", "flex");
+
     let sendData = { 'input': $("#seq-input").val() };
 
     $.ajax({
@@ -54,6 +56,7 @@ function predict() {
                 
                 explanation_out.append("<span>" + expl[i][2] +"</span>");
             }
+            $("#loading-overlay").css("display", "none");
         }
     });
 }

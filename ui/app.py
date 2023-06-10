@@ -3,6 +3,7 @@ from decide import predict as predict_function
 import pickle
 import numpy as np
 from openAiCringe import createBullshit
+import time
 
 with open('model.sav', "rb") as f:
   prediction_model = pickle.load(f)
@@ -51,6 +52,7 @@ def predict_api():
 
   print(predicted)
   print("Got data", data)
+  time.sleep(np.random.randint(5,20)/10)
   return {"seq": seq, "labels": labels, "probs": probs, "explanation": explanations}
 
 #deploy now

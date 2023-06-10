@@ -45,6 +45,7 @@ div#header {
 
     a {
         text-decoration: none;
+
         span {
             text-decoration: none;
             color: $black;
@@ -67,7 +68,7 @@ div#header {
                 background-color: $black;
             }
 
-            
+
             &:hover::after {
                 transform: scaleX(1.0);
             }
@@ -106,7 +107,7 @@ div#main {
 
 button {
     padding: 1rem;
-    
+
     border: none;
     background: none;
 
@@ -115,9 +116,57 @@ button {
     cursor: pointer;
     border-radius: 0.5rem;
     transition: 0.2s ease-in-out;
+
     &:hover {
         background-color: #22d319;
     }
 
     margin: 1rem;
+}
+
+div#loading-overlay {
+    display: none;
+
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    /*display: flex;*/
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column;
+
+    background-color: #80808080;
+
+    cursor: wait !important;
+
+    .loader {
+        border: 0.5rem solid #f3f3f3;
+        /* Light grey */
+        border-top: 0.5rem solid #3498db;
+        /* Blue */
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    span {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 3rem;
+    }
 }
