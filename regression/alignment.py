@@ -1,4 +1,5 @@
 from Bio import Align
+from Bio import pairwise2
 import pandas as pd
 import numpy as np
 
@@ -42,6 +43,14 @@ def average_alignment_score(sequence1, df, is_global = False):
         scores[i]= distance_function(sequence1, sequence2)
 
     return np.average(scores)
+
+def local_alignment_pair(sequence1, sequence2):
+    aligner = Align.PairwiseAligner(scoring='blastp')
+    aligner.mode = 'local'
+    out = aligner.align(sequence1,sequence2)
+    return (out[0][0], out[0][1])
+
+
 
 if __name__ == '__main__':
     df = pd.read_csv('data/all_data.csv')

@@ -1,7 +1,7 @@
 <img width="499" alt="Screenshot 2023-06-10 at 13 04 46" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/23fa2fb9-9deb-4f51-b742-40fd5a4111b6">
 
 
-Amino Acid Functions Explained
+**A**mino **A**cid **F**unctions **Ex**plained
 
 ## The Problem - Inferring Protein Functionality from Amino Acid sequences
 
@@ -42,45 +42,3 @@ The data obviously contains lots of noise (proteins very much depend on sex, age
 By understanding the protein functions we can rationalize the differences in RNAseq and how they relate to cancer.
 
 Understanding how the specific proteins contribute to cancer helps us decide which proteins are good targets.
-
-## Daniels pitch
-
-2 Main ones as far as I can tell:
-
-- Someone is sick, we want to know which proteins are the causing the issue, 
-- If we know what parts of protiens create different functions, we can engineer new proteins
-- This requires being able to clearly justify and explain the functions of proteins due to sequences of amino acids
-
-How, good old fashioned computer science and bioinformatics:
-
-Bioinformatics cocktail.
-
-What is the Problem:
-
-Answers the question "What is life?" lol
-
-Want to explain the data - not just stick an LLM at it and call it deep.
-
-How do we solve it?
-
-
-Are you sure?
-
-
-Can you do it?
-
-
-
-The Process:
-
-Large dataset of labelled proteins.
-
-Pairwise alignment - gives distance matrix
-
-Get similarity matrix somehow
-
-Then perform Markov Clustering
-
-For every cluster we find a sequence that represents that cluster
-
-Local-Alignment

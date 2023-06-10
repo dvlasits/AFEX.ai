@@ -34,7 +34,7 @@ data = pd.read_csv('dist_matrix_data.csv')
 clusters = pd.Series(clusters)
 
 
-data = pd.concat([data, clusters], axis=1, join="inner")
+data = pd.concat([data, clusters.rename('cluster_id')], axis=1, join="inner")
 print(data.head(5))
 
 data.to_csv('clustered.csv')
