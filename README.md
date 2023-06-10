@@ -18,6 +18,15 @@ Understanding the protein interactions and their roles is important so we undest
 
 We're building explainable ML model to tell us what the individual proteins do and how we know.
 
+### How are we different
+People are already trying to use large models to predict protein function - but this is unexplainable blackbox.
+
+Our model could be improved by using 3D structural data from AlphaFold, to understand spatial interactions - this would be the next iteration of our model.
+
+Identifying important sequences could also give us insight on how proteins work and how can we engineer them
+
+## Daniels pitch
+
 
 What is the Problem:
 
