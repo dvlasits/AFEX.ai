@@ -1,9 +1,16 @@
 import pandas as pd
 import numpy as np
 from alignment import local_alignment_score, local_alignment_pair
-data = pd.read_csv('with_representatives.csv')
+
+import os
+my_dir = os.path.dirname(__file__)
+pickle_file_path = os.path.join(my_dir, 'with_representatives.csv')
+
+
+data = pd.read_csv(pickle_file_path)
 from sklearn.linear_model import LogisticRegression
 import pickle
+
 def train(data):
     representatives = np.unique(data['representative'])
     scores = np.array([local_alignment_score(sequence,representative) for sequence in np.array(data['sequence']) for representative in representatives ]).reshape((len(data),len(representatives)))
