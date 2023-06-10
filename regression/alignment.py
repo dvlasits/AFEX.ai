@@ -48,7 +48,7 @@ def local_alignment_pair(sequence1, sequence2):
     aligner = Align.PairwiseAligner(scoring='blastp')
     aligner.mode = 'local'
     out = aligner.align(sequence1,sequence2)
-    return ((out[0][0]), out[0][1])
+    return (sequence1.find((out[0][0])), (out[0][0]), out[0][1])
 
 
 

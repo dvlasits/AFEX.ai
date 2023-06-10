@@ -23,7 +23,7 @@ def predict(sequence, clf):
 
     reasons = [local_alignment_pair(sequence, representative)  for representative
          in representatives]
-    return (clf.predict_proba(scores), reasons)
+    return (clf.predict(scores), clf.classes_, clf.predict_proba(scores), reasons)
 
 if __name__ == '__main__':
     clf = train(data)
