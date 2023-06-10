@@ -37,6 +37,15 @@ Understanding how the specific proteins contribute to cancer helps us decide whi
 
 ## Daniels pitch
 
+2 Main ones as far as I can tell:
+
+- Someone is sick, we want to know which proteins are the causing the issue, 
+- If we know what parts of protiens create different functions, we can engineer new proteins
+- This requires being able to clearly justify and explain the functions of proteins due to sequences of amino acids
+
+How, good old fashioned computer science and bioinformatics:
+
+Bioinformatics cocktail.
 
 What is the Problem:
 
