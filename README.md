@@ -8,7 +8,8 @@ Amino Acid Functions Explained
 
 ## The Process
 
-<img width="1495" alt="Screenshot 2023-06-10 at 13 02 17" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/be19748f-582b-4994-bd76-9794399e24f3">
+<img width="991" alt="Screenshot 2023-06-10 at 13 36 00" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/d1c6c92c-6be2-46e8-8369-989519230e00">
+
 
 
 
