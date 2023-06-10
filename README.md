@@ -3,9 +3,9 @@
 
 Amino Acid Functions Explained
 
-## The Problem
+## The Problem - Inferring Protein Functionality from Amino Acid sequences
 
-Inferring the protein functionality from an amino acid sequence.
+Initially, BLAST was the tool of choice of classifying proteins. However, this is clearly overly slow and not the right tool for the job. Scientists came up with another method of classifying proteins into groups and training HMM's on each classification. All HMMs are then run through the protein to classify with the highest probability deciding the classification. This is also very slow if you consider the n^2 time complexity of getting a probability from an HMM. The next solution just relies on a neural network which is a complete black box and not helpful. Our solution takes the best of both worlds, it is fast and fully explainable.
 
 
 ## The Process
