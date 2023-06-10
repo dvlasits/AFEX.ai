@@ -17,7 +17,7 @@ if __name__ == '__main__':
     # load cluster sequences
     data = pd.read_csv('../clustering/clustered.csv')
 
-    N = 5
+    N = 8
 
     best = generate_random_sequence(N)
     best_score = 0
