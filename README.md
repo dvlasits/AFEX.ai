@@ -1,8 +1,15 @@
-# AFEX.ai
+<img width="499" alt="Screenshot 2023-06-10 at 13 04 46" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/23fa2fb9-9deb-4f51-b742-40fd5a4111b6">
 
-<img width="525" alt="image" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/0a9f6b39-3e22-4958-9b8f-9ad54fef6d75">
 
 Amino Acid Functions Explained
+
+
+
+
+## The Process
+
+<img width="1495" alt="Screenshot 2023-06-10 at 13 02 17" src="https://github.com/dvlasits/AFEX.ai/assets/11242884/be19748f-582b-4994-bd76-9794399e24f3">
+
 
 
 ## Clustering
