@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block include %}
+<link rel="stylesheet" href="{{url_for('static',filename = 'predict.css')}}">
+<script src="{{url_for('static',filename = 'predict.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+<h1>Input protein sequence</h1>
+<textarea id="seq-input"></textarea>
+<button onclick="predict()">Annotate</button>
+<h1>Annotated sequence</h1>
+<div id="result"></div>
+{% endblock %}

@@ -1,0 +1,121 @@
+$theme: #22c9bb;
+$black: #303030;
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: $black;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+div#bg-image {
+    width: 100%;
+
+    background-color: black;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: $theme;
+    }
+}
+
+div#header {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    a {
+        text-decoration: none;
+        span {
+            text-decoration: none;
+            color: $black;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 1rem;
+
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+
+                transition: 0.2s ease-in-out;
+                transform: scaleX(0.5);
+                background-color: $black;
+            }
+
+            
+            &:hover::after {
+                transform: scaleX(1.0);
+            }
+        }
+    }
+
+    img {
+        height: 3rem;
+    }
+}
+
+div#footer {
+    background-color: $theme;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem 0;
+}
+
+div#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.2rem;
+
+    width: 100%;
+    max-width: 80ch;
+
+    padding: 2rem 2rem;
+
+    justify-self: center;
+}
+
+button {
+    padding: 1rem;
+    
+    border: none;
+    background: none;
+
+    background-color: #19d36d;
+
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: 0.2s ease-in-out;
+    &:hover {
+        background-color: #22d319;
+    }
+}

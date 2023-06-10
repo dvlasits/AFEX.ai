@@ -1,0 +1,126 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #303030;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+div#bg-image {
+  width: 100%;
+  background-color: black;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#bg-image h1 {
+  color: #22c9bb;
+}
+
+div#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+div#header a {
+  text-decoration: none;
+}
+div#header a span {
+  text-decoration: none;
+  color: #303030;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem;
+  position: relative;
+}
+div#header a span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transition: 0.2s ease-in-out;
+  transform: scaleX(0.5);
+  background-color: #303030;
+}
+div#header a span:hover::after {
+  transform: scaleX(1);
+}
+div#header img {
+  height: 3rem;
+}
+
+div#footer {
+  background-color: #22c9bb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+div#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.2rem;
+  width: 100%;
+  max-width: 80ch;
+  padding: 2rem 2rem;
+  justify-self: center;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  background: none;
+  background-color: #19d36d;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+}
+button:hover {
+  background-color: #22d319;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 4rem;
+}
+
+div#result {
+  width: 100%;
+  outline: 1px #303030 solid;
+  border-radius: 0.5rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  align-content: flex-start;
+}
+div#result span {
+  width: 2ch;
+  text-align: center;
+}
+div#result span.green {
+  background-color: #6de04b;
+}
+div#result span.red {
+  background-color: #ea6666;
+}/*# sourceMappingURL=predict.css.map */

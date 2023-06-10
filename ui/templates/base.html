@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>AFEX.ai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  {% block include %}{% endblock %}
+</head>
+
+<body>
+    <div id="header">
+        <img src="{{url_for('static', filename='logo.png')}}" alt="">
+        <a href="/predict"><span>Predict</span></a>
+        <a href="/about"><span>About</span></a>
+    </div>
+    <div id="bg-image"><h1>Understanding Protein Function</h1></div>
+    <div id="main">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="footer">  
+        <span>AFEX.ai</span>
+        <span>©2023</span>
+    </div>
+</body>
+</html>
