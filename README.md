@@ -23,6 +23,8 @@ What is the Problem:
 
 Answers the question "What is life?" lol
 
+Want to explain the data - not just stick an LLM at it and call it deep.
+
 How do we solve it?
 
 
@@ -30,3 +32,19 @@ Are you sure?
 
 
 Can you do it?
+
+
+
+The Process:
+
+Large dataset of labelled proteins.
+
+Pairwise alignment - gives distance matrix
+
+Get similarity matrix somehow
+
+Then perform Markov Clustering
+
+For every cluster we find a sequence that represents that cluster
+
+Local-Alignment
