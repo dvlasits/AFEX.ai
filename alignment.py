@@ -31,5 +31,5 @@ def distance_matrix(df, is_global = True):
 
 if __name__ == '__main__':
     df = pd.read_csv('data/all_data.csv')
-    df = df.head(10)
+    df = df.head(1000)
     print(distance_matrix(df, is_global=False))
