@@ -1,0 +1,15 @@
+@import 'base.scss';
+
+div#main {
+    h1 {
+        border-bottom: 2px solid #808080;
+        text-transform: capitalize;
+        width: 100%;
+    }
+    p {
+        word-wrap: break-word;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+

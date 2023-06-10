@@ -16,14 +16,19 @@ with open(os.path.join(my_dir, 'model.sav'), "rb") as f:
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
+@app.route("/")
 @app.route("/about")
 def about():
   return render_template("about.html")
 
-@app.route("/")
+@app.route("/example-sequences")
+def example_sequences():
+  return render_template("example_seqs.html")
+
 @app.route("/predict")
 def predict():
   return render_template("predict.html")
+
 
 @app.route("/predict-api", methods=["POST"])
 def predict_api():
