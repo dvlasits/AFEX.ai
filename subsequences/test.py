@@ -9,7 +9,8 @@ def generate_random_sequence(n):
     return ''.join(aminoacids[indices])
 
 # load cluster sequences
-data = pd.read_csv('../data/clustered.csv')
+data = pd.read_csv('../data/clustering.csv')
+data = data[data['0'] == 0]
 
 N = 5
 
@@ -29,6 +30,3 @@ for it in range(10000):
         best = seq
 
 print(f"FINISHED! best score = {best_score}, best seq {best}")
-
-
-print(generate_random_sequence(5))
