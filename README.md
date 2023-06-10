@@ -5,6 +5,8 @@ Amino Acid Functions Explained
 
 ## The Problem
 
+Inferring the protein functionality from an amino acid sequence.
+
 
 ## The Process
 
