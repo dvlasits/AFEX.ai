@@ -4,7 +4,7 @@ from alignment import local_alignment_score, local_alignment_pair
 
 import os
 my_dir = os.path.dirname(__file__)
-pickle_file_path = os.path.join(my_dir, 'with_representatives.csv')
+pickle_file_path = os.path.join(my_dir, 'data', 'with_representatives.csv')
 
 
 data = pd.read_csv(pickle_file_path)
@@ -31,6 +31,13 @@ def predict(sequence, clf):
     reasons = [local_alignment_pair(sequence, representative)  for representative
          in representatives]
     return (clf.predict(scores), clf.classes_, clf.predict_proba(scores), reasons)
+
+def predict_with_file_model(sequence, filename="model.sav"):
+
+    with open('model.sav', "rb") as f:
+        prediction_model = pickle.load(f)
+
+    return predict(sequence, prediction_model)
 
 if __name__ == '__main__':
     clf = train(data)
