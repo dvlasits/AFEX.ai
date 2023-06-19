@@ -6,13 +6,14 @@ from matplotlib import pyplot as plt
 import datetime
 from datetime import datetime
 import numpy as np
+import os
 
 n = 300
 
 data = pd.read_csv('../data/all_data.csv')
 data = data.sample(frac=n/len(data)).reset_index(drop=True)
 
-data.to_csv('dist_matrix_data.csv', index=False)
+data.to_csv(os.path.join('data', 'dist_matrix_data.csv'), index=False)
 
 start = datetime.now()
 

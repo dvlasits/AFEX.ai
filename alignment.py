@@ -23,13 +23,28 @@ def distance_matrix(df, is_global = True):
     distance_function = global_alignment_score
     if not is_global:
         distance_function = local_alignment_score
-    for i in range(n):
-        for j in range(n):
+    for i in range(n-1):
+        for j in range(i+1,n):
             matrix[i][j] = distance_between_two(df,i,j, distance_function)
+
+    matrix += matrix.T
     return matrix
 
+def average_alignment_score(sequence1, df, is_global = False):
+    df = df.reset_index()
+    n = len(df.index)
+    scores = np.zeros(n)
+    distance_function = global_alignment_score
+    if not is_global:
+        distance_function = local_alignment_score
+    for i in range(n):
+        sequence2 = df.at[i, 'sequence']
+        scores[i]= distance_function(sequence1, sequence2)
 
-if __name__ == '__main__':
-    df = pd.read_csv('data/all_data.csv')
-    df = df.head(1000)
-    print(distance_matrix(df, is_global=False))
+    return np.average(scores)
+
+def local_alignment_pair(sequence1, sequence2):
+    aligner = Align.PairwiseAligner(scoring='blastp')
+    aligner.mode = 'local'
+    out = aligner.align(sequence1,sequence2)
+    return (sequence1.find((out[0][0])), (out[0][0]), out[0][1])

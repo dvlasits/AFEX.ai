@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from alignment import average_alignment_score
+import os
 aminoacids = np.array([c for c in "ACDEFGIKLMNPQRSTUVWY"])
 assert(len(aminoacids) == 20)
 
@@ -15,7 +16,7 @@ def get_score(candidate, df, cluster_id):
 
 if __name__ == '__main__':
     # load cluster sequences
-    data = pd.read_csv('../clustering/clustered.csv')
+    data = pd.read_csv(os.path.join('data', 'clustered.csv'))
 
     N = 8
 
@@ -46,4 +47,4 @@ if __name__ == '__main__':
 
 
     print(f"FINISHED! best scores = {best_scores}, best seqs {best_sequences}")
-    data.to_csv('with_representatives.csv')
+    data.to_csv(os.path.join('data', 'with_representatives.csv'))
